@@ -1,0 +1,43 @@
+# SPDX-License-Identifier: GPL-2.0
+
+pahole-ver := $(CONFIG_PAHOLE_VERSION)
+pahole-flags-y :=
+
+ifeq ($(call test-le, $(pahole-ver), 125),y)
+
+# pahole 1.18 through 1.21 can't handle zero-sized per-CPU vars
+ifeq ($(call test-le, $(pahole-ver), 121),y)
+pahole-flags-$(call test-ge, $(pahole-ver), 118)	+= --skip_encoding_btf_vars
+endif
+
+pahole-flags-$(call test-ge, $(pahole-ver), 121)	+= --btf_gen_floats
+
+pahole-flags-$(call test-ge, $(pahole-ver), 125)	+= --skip_encoding_btf_inconsistent_proto --btf_gen_optimized
+
+else
+
+# Switch to using --btf_features for v1.26 and later.
+pahole-flags-$(call test-ge, $(pahole-ver), 126)  = -j --btf_features=encode_force,var,float,enum64,decl_tag,type_tag,optimized_func,consistent_func,decl_tag_kfuncs
+
+ifneq ($(KBUILD_EXTMOD),)
+module-pahole-flags-$(call test-ge, $(pahole-ver), 126) += --btf_features=distilled_base
+endif
+
+endif
+
+# pahole 1.22 introduced the -j option for parallel processing, but
+# this makes its output unreproducible.
+# pahole 1.27 introduced --btf_features=+reproducible_build which
+# makes the output reproducible even when -j is used.
+# Assume that if KBUILD_BUILD_TIMESTAMP is set then a reproducible
+# build is required and we must not use -j alone.
+ifeq ($(KBUILD_BUILD_TIMESTAMP),)
+pahole-flags-$(call test-ge, $(pahole-ver), 122)	+= -j
+else
+pahole-flags-$(call test-ge, $(pahole-ver), 127)	+= -j --btf_features=+reproducible_build
+endif
+
+pahole-flags-$(CONFIG_PAHOLE_HAS_LANG_EXCLUDE)		+= --lang_exclude=rust
+
+export PAHOLE_FLAGS := $(pahole-flags-y)
+export MODULE_PAHOLE_FLAGS := $(module-pahole-flags-y)

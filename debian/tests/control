@@ -1,0 +1,4 @@
+Test-Command: py.test debian/lib/python
+Restrictions: superficial
+Depends: python3-pytest, python3-jinja2
+
