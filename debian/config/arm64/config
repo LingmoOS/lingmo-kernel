@@ -1470,6 +1470,7 @@ CONFIG_DWMAC_ROCKCHIP=m
 ##
 CONFIG_TI_K3_AM65_CPSW_NUSS=m
 CONFIG_TI_K3_AM65_CPTS=m
+CONFIG_TI_ICSSG_PRUETH=m
 
 ##
 ## file: drivers/net/fddi/Kconfig
@@ -1506,6 +1507,7 @@ CONFIG_MARVELL_10G_PHY=m
 CONFIG_MICROSEMI_PHY=m
 CONFIG_MOTORCOMM_PHY=m
 CONFIG_REALTEK_PHY=m
+CONFIG_DP83869_PHY=m
 
 ##
 ## file: drivers/net/phy/qcom/Kconfig
@@ -1699,6 +1701,11 @@ CONFIG_PHY_SUN50I_USB3=m
 CONFIG_PHY_MESON8B_USB2=m
 
 ##
+## file: drivers/phy/cadence/Kconfig
+##
+CONFIG_PHY_CADENCE_TORRENT=m
+
+##
 ## file: drivers/phy/freescale/Kconfig
 ##
 CONFIG_PHY_FSL_IMX8MQ_USB=m
@@ -1772,6 +1779,11 @@ CONFIG_PHY_ROCKCHIP_USBDP=m
 ## file: drivers/phy/tegra/Kconfig
 ##
 CONFIG_PHY_TEGRA_XUSB=m
+
+##
+## file: drivers/phy/ti/Kconfig
+##
+CONFIG_PHY_J721E_WIZ=m
 
 ##
 ## file: drivers/phy/xilinx/Kconfig
@@ -1980,6 +1992,7 @@ CONFIG_REGULATOR_VCTRL=m
 ##
 CONFIG_REMOTEPROC=y
 CONFIG_MTK_SCP=m
+CONFIG_PRU_REMOTEPROC=m
 CONFIG_QCOM_Q6V5_ADSP=m
 CONFIG_QCOM_Q6V5_MSS=m
 CONFIG_QCOM_Q6V5_PAS=m
@@ -2010,6 +2023,7 @@ CONFIG_RPMSG_QCOM_SMD=m
 ##
 ## file: drivers/rtc/Kconfig
 ##
+CONFIG_RTC_DRV_ABX80X=m
 CONFIG_RTC_DRV_DS1307=y
 CONFIG_RTC_DRV_HYM8563=m
 CONFIG_RTC_DRV_MAX77686=y
@@ -2116,6 +2130,11 @@ CONFIG_ROCKCHIP_DTPM=m
 ##
 CONFIG_ARCH_TEGRA_132_SOC=y
 CONFIG_ARCH_TEGRA_210_SOC=y
+
+##
+## file: drivers/soc/ti/Kconfig
+##
+CONFIG_TI_PRUSS=m
 
 ##
 ## file: drivers/spi/Kconfig
@@ -2283,6 +2302,14 @@ CONFIG_SERIAL_OF_PLATFORM=y
 ##
 CONFIG_SCSI_UFSHCD_PLATFORM=m
 CONFIG_SCSI_UFS_QCOM=m
+
+##
+## file: drivers/usb/cdns3/Kconfig
+##
+CONFIG_USB_CDNS_SUPPORT=m
+CONFIG_USB_CDNS3=m
+CONFIG_USB_CDNS3_GADGET=y
+CONFIG_USB_CDNS3_HOST=y
 
 ##
 ## file: drivers/usb/chipidea/Kconfig

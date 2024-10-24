@@ -10,19 +10,11 @@ Updating the upstream source
 In addition to the build-dependencies, you will need the rsync package
 installed.
 
-1) Run: ./debian/bin/genorig.py <repository>
+1) Run: uscan --download-current-version --vcs-export-uncompressed
 
-   where <repository> is a local or remote git repository with the
-   upstream release tag in it.
-
-   If you do not have a local repository, use the appropriate one of:
-
-   * https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git
-   * https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux-stable.git
-   * git://kernel.ubuntu.com/ubuntu/linux.git
-
-   This will produce ../orig/linux_<version>.orig.tar.xz
-   (e.g. linux_3.5~rc1.orig.tar.xz).
+   This will produce ../linux-<version>.tar (e.g. linux-6.11.tar) and
+   ../linux_<version>.orig.tar.xz (e.g. linux_6.11.orig.tar.xz).  You
+   can delete the first of these.
 
    It involves deleting files for DFSG compliance, as listed in the
    Files-Excluded field in debian/copyright.

@@ -37,6 +37,6 @@ Build-Depends-Arch:
  flex <!pkg.linux.nokernel>,
  flex <!pkg.linux.notools>,
 Rules-Requires-Root: no
-Vcs-Git: https://github.com/LingmoOS/lingmo-kernel.git
-Vcs-Browser: https://github.com/LingmoOS/lingmo-kernel
+Vcs-Git: https://github.com/LingmoOS/lingmo-linux.git
+Vcs-Browser: https://github.com/LingmoOS/lingmo-linux
 Homepage: https://www.kernel.org/

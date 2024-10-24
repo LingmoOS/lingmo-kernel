@@ -105,7 +105,6 @@ bugfix/all/tools-perf-fix-missing-ldflags-for-some-programs.patch
 bugfix/all/tools_lib_symbol_use_d_fortify_source_2_for_non_debug_builds.patch
 bugfix/all/perf-tools-support-extra-cxxflags.patch
 bugfix/all/perf-tools-pass-extra_cflags-through-to-libbpf-build-again.patch
-bugfix/all/tools-rtla-fix-installation-from-out-of-tree-build.patch
 bugfix/all/kbuild-bpf-fix-btf-reproducibility.patch
 
 # debian-installer fixes

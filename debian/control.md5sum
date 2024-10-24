@@ -1,5 +1,5 @@
 95f094d657bf4acbe262dd63ccf43409  debian/bin/gencontrol.py
-4c41d280eb3ecf45af7c3608d3b872e8  debian/build/version-info
+691e7f44d34fb96ffb669898b2e40463  debian/build/version-info
 ba2c200f8c43f7ec8d8323561739379a  debian/config/alpha/defines.toml
 9c7e42b270c37dcbc951f0696b8f4293  debian/config/amd64/defines.toml
 cfab80ba66f77402287b44e9143e844f  debian/config/arm64/defines.toml
@@ -38,7 +38,7 @@ c009517cb2931ada043f11a79b797a0b  debian/templates/headers.tests-control.in
 eebbd0d671c21eba0a79f6d1226c0bc7  debian/templates/image-dbg.meta.lintian-overrides.in
 ecec9b1808743ce6dd807a7bbdb293d1  debian/templates/image-dbg.meta.maintscript.in
 847b605d62ec18a71eb5e93504396124  debian/templates/image-extra-dev.control.in
-37b2e854cd3413be305273f604738bb6  debian/templates/image-unsigned.control.in
+d9e868afcd89c3e3d59320183d565a4e  debian/templates/image-unsigned.control.in
 0327750d6696dee915a532aec73a0fd6  debian/templates/image-unsigned.postinst.in
 03fc85a4557719a9cfcc61eb9d3bdf7b  debian/templates/image-unsigned.postrm.in
 38004750aa03cea41d5d3aeafff16fcc  debian/templates/image-unsigned.preinst.in
@@ -60,14 +60,14 @@ c37dd714832ae86180ff90a85d418b72  debian/templates/signed-template.lintian-overr
 8692a224eaddf0b80c98dfef4e26a3bb  debian/templates/signed.headers.meta.control.in
 fe7cdc2df9d38c9a43bfc1f5abadd127  debian/templates/signed.headers.meta.lintian-overrides.in
 39dddaa9ca4735ad2ddaf682ecf0b566  debian/templates/signed.headers.meta.maintscript.in
-d0f4305dd51861c31b7d5a7cf9bd0d4f  debian/templates/signed.image.control.in
+d101980c8c6daaaf191f4e9d7e37e6f1  debian/templates/signed.image.control.in
 0327750d6696dee915a532aec73a0fd6  debian/templates/signed.image.postinst.in
 03fc85a4557719a9cfcc61eb9d3bdf7b  debian/templates/signed.image.postrm.in
 38004750aa03cea41d5d3aeafff16fcc  debian/templates/signed.image.preinst.in
 afb508873a44a1f196c2a525fec4b415  debian/templates/signed.image.prerm.in
-c5c02175371963ae896b5f973a6b3f4b  debian/templates/signed.source.control.in
+3cae3a79a66a1b6b9c951f96dafd357b  debian/templates/signed.source.control.in
 0ce822e4b4bea2946ed195ba077157f8  debian/templates/signed.source.lintian-overrides.in
-fc73f4261fceb7454da2832a524fa65d  debian/templates/source.control.in
+b44f843c1baca80c782ca41e6a2b12b1  debian/templates/source.control.in
 a8f967b8b3af11e4ca0b2aae510e7cd4  debian/templates/sourcebin.control.in
 0f283d1deb7af77eba65072e1cd81de3  debian/templates/sourcebin.meta.control.in
 a20d83421667bad21739041d4e743ed1  debian/templates/sourcebin.meta.maintscript.in

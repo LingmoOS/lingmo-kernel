@@ -15,12 +15,9 @@ phy-mvebu-cp110-comphy ?
 # SoC modules
 drivers/soc/**
 
-# Watchdog needed for reboot
-sunxi_wdt ?
-imx2_wdt ?
-
-# For Turris MOX (u-boot enables the watchdog)
-armada_37xx_wdt ?
+# Watchdogs: boot loader may start a watchdog that we need to pet,
+# and/or it may be the only way to trigger reboot
+drivers/watchdog/**
 
 # SPI devices
 drivers/spi/**
@@ -72,7 +69,6 @@ qcom_glink_rpm
 qcom_smd
 qcom_hwspinlock
 icc-osm-l3
-rtc-pm8xxx
 rpmpd
 qrtr ?
 qrtr-smd ?
@@ -95,3 +91,11 @@ i2c-mv64xxx
 i2c-imx
 i2c-qcom-geni
 i2c-qup
+i2c-omap
+
+# TI AM64 / AM65 ICSSG PRU subsystem
+drivers/irqchip/irq-pruss-intc
+drivers/remoteproc/pru_rproc
+
+# RTC
+drivers/rtc/**

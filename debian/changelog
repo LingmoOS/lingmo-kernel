@@ -1,3 +1,11 @@
+linux (6.11.5-2) unstable; urgency=medium
+
+  [Lingmo OS Team]
+  * New release kernel for Lingmo OS 3.0(Helium)
+
+ -- Lingmo OS Team <team@lingmo.org>  Thu, 3 Oct 2024 22:30:00 +0800
+
+
 linux (6.11.1-1) unstable; urgency=medium
 
   * New release for Lingmo OS 3.0(Helium)

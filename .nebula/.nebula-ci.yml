@@ -1,0 +1,13 @@
+image: debian:testing
+stages: 
+  - build
+
+build-worker:
+  stage: build
+  script:
+    - apt update && apt -y upgrade
+    - apt install -y build-essential fakeroot devscripts sudo
+    - apt -y build-dep .
+    - rm debian/source/format
+    - dpkg-buildpackage -j8
+    - ls

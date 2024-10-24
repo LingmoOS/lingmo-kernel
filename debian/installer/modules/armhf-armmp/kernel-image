@@ -20,8 +20,9 @@ drivers/regulator/**
 # Powersupply
 axp20x_usb_power ?
 
-# Watchdog needed for reboot
-sunxi_wdt ?
+# Watchdogs: boot loader may start a watchdog that we need to pet,
+# and/or it may be the only way to trigger reboot
+drivers/watchdog/**
 
 # Regulator-SoC synchronization
 rockchip-io-domain ?
